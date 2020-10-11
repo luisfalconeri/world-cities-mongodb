@@ -1,6 +1,6 @@
-from settings import COUNTRY_FIELDS_BLACKLIST
-from data.CurrencySymbols import CURRENCY_SYMBOLS
-from utils.util import remove_field_from_blacklist
+from app.utils.world_cities_mongodb.settings import COUNTRY_FIELDS_BLACKLIST
+from app.utils.world_cities_mongodb.data.CurrencySymbols import CURRENCY_SYMBOLS
+from app.utils.world_cities_mongodb.helpers.util import remove_field_from_blacklist
 
 COUNTRY_FIELDS = {
     'ISO': 0, # ISO

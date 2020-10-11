@@ -2,7 +2,8 @@ import urllib.request
 import zipfile
 import shutil
 import os
-from utils.paths import get_country_data_path, get_city_data_path
+from app.utils.world_cities_mongodb.helpers.paths import get_country_data_path, get_city_data_path
+
 
 def download_file(url, file_name):
     with urllib.request.urlopen(url) as response, open(file_name, 'wb') as out_file:

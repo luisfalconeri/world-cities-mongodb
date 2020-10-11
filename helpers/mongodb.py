@@ -1,17 +1,11 @@
-from pymongo import MongoClient
-from utils.parser import cities, countries, cities_dict, countries_dict
+from app import app, mongo
+from app.utils.world_cities_mongodb.helpers.parser import cities, countries, cities_dict, countries_dict
+import urllib3
 from urllib.parse import quote_plus
-import settings
+from app.utils.world_cities_mongodb import settings
 
-if settings.MONGO_USER and settings.MONGO_PASSWORD:
-    URI = "mongodb://%s:%s@%s:%s/%s" % (quote_plus(settings.MONGO_USER), quote_plus(settings.MONGO_PASSWORD), settings.MONGO_HOST, settings.MONGO_PORT, settings.DB_NAME)
-else:
-    URI = "mongodb://%s:%s/%s" % (settings.MONGO_HOST, settings.MONGO_PORT, settings.DB_NAME)
-
-MONGO_CLIENT = MongoClient(URI)
-DB = MONGO_CLIENT[settings.DB_NAME]
-CITY_COLLECTION = DB[settings.CITY_COLLECTION_NAME]
-COUNTRY_COLLECTION = DB[settings.COUNTRY_COLLECTION_NAME]
+CITY_COLLECTION = mongo.db['cities']
+COUNTRY_COLLECTION =mongo.db['countries']
 
 def init():
     CITY_COLLECTION.drop()

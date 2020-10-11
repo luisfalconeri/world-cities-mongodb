@@ -1,5 +1,5 @@
-from settings import CITY_FIELDS_BLACKLIST
-from utils.util import remove_field_from_blacklist
+from app.utils.world_cities_mongodb.settings import CITY_FIELDS_BLACKLIST
+from app.utils.world_cities_mongodb.helpers.util import remove_field_from_blacklist
 
 CITY_FIELDS = {
     'city_id': 0, # integer id of record in geonames database

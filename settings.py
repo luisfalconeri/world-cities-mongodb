@@ -1,12 +1,3 @@
-MONGO_HOST = 'localhost'
-MONGO_PORT = 27017
-MONGO_USER = ''
-MONGO_PASSWORD = ''
-DB_NAME = 'WorldCities'
-
-CITY_COLLECTION_NAME = 'cities'
-COUNTRY_COLLECTION_NAME = 'countries'
-
 # Only countries with languages below.
 # Find the languages here:
 # http://www.lingoes.net/en/translator/langcode.htm
@@ -39,6 +30,7 @@ CITY_FIELDS_BLACKLIST = [
     'cc2',
     'modification_date'
 ]
+
 COUNTRY_FIELDS_BLACKLIST = [
     'iso3',
     'iso_numeric',
