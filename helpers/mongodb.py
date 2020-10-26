@@ -1,8 +1,8 @@
-from app import app, mongo
-from app.utils.world_cities_mongodb.helpers.parser import cities, countries, cities_dict, countries_dict
+from app_src import app, mongo
+from app_src.utils.world_cities_mongodb.helpers.parser import cities, countries, cities_dict, countries_dict
 import urllib3
 from urllib.parse import quote_plus
-from app.utils.world_cities_mongodb import settings
+from app_src.utils.world_cities_mongodb import settings
 
 CITY_COLLECTION = mongo.db['cities']
 COUNTRY_COLLECTION =mongo.db['countries']

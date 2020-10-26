@@ -1,8 +1,8 @@
 import csv
-from app.utils.world_cities_mongodb.helpers.paths import get_city_data_path, get_country_data_path
-from app.utils.world_cities_mongodb.models.City import City
-from app.utils.world_cities_mongodb.models.Country import Country
-from app.utils.world_cities_mongodb import settings
+from app_src.utils.world_cities_mongodb.helpers.paths import get_city_data_path, get_country_data_path
+from app_src.utils.world_cities_mongodb.models.City import City
+from app_src.utils.world_cities_mongodb.models.Country import Country
+from app_src.utils.world_cities_mongodb import settings
 
 
 def read_csv_by_line(file_path, callback):
