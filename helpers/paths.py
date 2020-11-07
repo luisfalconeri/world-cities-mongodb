@@ -1,7 +1,7 @@
 import os
 
 def get_data_folder_path():
-    return os.path.join('modules/app/utils/world_cities_mongodb/data')
+    return os.path.join('modules/app_src/utils/world_cities_mongodb/data')
 
 def get_country_data_path():
     return os.path.join(get_data_folder_path(), 'countryInfo.txt')
