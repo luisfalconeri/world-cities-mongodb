@@ -1,11 +1,11 @@
-from app_src import app, mongo
+from app_src import mongo_geo_db as mongo
 from app_src.utils.world_cities_mongodb.helpers.parser import cities, countries, cities_dict, countries_dict
 import urllib3
 from urllib.parse import quote_plus
 from app_src.utils.world_cities_mongodb import settings
 
-CITY_COLLECTION = mongo.db['cities']
-COUNTRY_COLLECTION =mongo.db['countries']
+CITY_COLLECTION = mongo["letter-app"].cities
+COUNTRY_COLLECTION = mongo["letter-app"].countries
 
 def init():
     CITY_COLLECTION.drop()
